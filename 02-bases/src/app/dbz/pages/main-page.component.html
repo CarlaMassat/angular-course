@@ -1,0 +1,16 @@
+<h1>DBZ Personajes</h1>
+<hr>
+<div class="row">
+  <div class="col">
+     <!--[characterList] es la propiedad definida en list.component  -->
+    <app-dbz-list [characterList]="dbzService.characters"></app-dbz-list>
+  </div>
+
+
+  <div class="col">
+
+    <!--(onNewCharacter) es el metodo que se define en add-character-component.ts-->
+<app-dbz-add-character (onNewCharacter)="dbzService.onNewCharacter($event)"></app-dbz-add-character>
+
+  </div>
+</div>
